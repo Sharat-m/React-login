@@ -14,10 +14,15 @@ var loggedIn = true;
 //   }
 // }
 
+const currentTime = new Date().getHours();
+console.log(currentTime);
+
 function App() {
   return <div className="container">{
-  loggedIn === true ? <h1>Hello</h1> : <div> <Signin /> </div>}
-  
+    //Ternary operator
+//   loggedIn === true ? <h1>Hello</h1> : <div> <Signin /> </div>
+  currentTime > 12 ? <h1>Why are you working still?</h1>: null
+}
   </div>;
 }
 
