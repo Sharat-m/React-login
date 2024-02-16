@@ -1,30 +1,16 @@
 import React from "react";
-import Signin from "./Signin";
-var loggedIn = true;
+import Form from "./Form";
 
-// function renderConditionaly() {
-//   if (loggedIn === true) {
-//     return <h1>Hello</h1>;
-//   } else {
-//     return (
-//       <div>
-//         <Signin />
-//       </div>
-//     );
-//   }
-// }
-
-const currentTime = new Date().getHours();
-console.log(currentTime);
+var userIsRegistered = false;
 
 function App() {
-  return <div className="container">{
-    //Ternary operator
-//   loggedIn === true ? <h1>Hello</h1> : <div> <Signin /> </div>
-    //AND operator
-  currentTime < 12 && <h1>Why are you working still?</h1>
-}
-  </div>;
+  return (
+    <div className="container">
+      <Form 
+      isRegistered = {userIsRegistered}
+      />
+    </div>
+  );
 }
 
 export default App;
