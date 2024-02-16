@@ -1,13 +1,27 @@
 import React from "react";
 import Form from "./Form";
 
+function strike() {
+    document.getElementById("root").style.textDecoration = "line-through";
+}
+ 
+function unstrike() {
+    document.getElementById("root").style.textDecoration = null
+}
+
 
 function App() {
-    var isDone = false;
+     return (
+<div>
+<p>Buy Milk</p>
+<button onClick={strike}> Change to strike through</button> <br />
+<button onClick={unstrike} > Change Back </button>
 
-    const strikethrough = {textDecoration: "line-through"};
-    
-    return <p style={isDone === true ? strikethrough : null}>Buy Milk</p>
+</div>
+
+
+     ) 
+ 
 
 }
 
