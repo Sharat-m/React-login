@@ -21,7 +21,8 @@ function App() {
   return <div className="container">{
     //Ternary operator
 //   loggedIn === true ? <h1>Hello</h1> : <div> <Signin /> </div>
-  currentTime > 12 ? <h1>Why are you working still?</h1>: null
+    //AND operator
+  currentTime < 12 && <h1>Why are you working still?</h1>
 }
   </div>;
 }
